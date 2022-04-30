@@ -12,5 +12,9 @@
 <script>
 export default {
   name: "company",
+  middleware: 'auth'
+  // middleware() {
+  //   console.log("Middleware company")
+  // }
 };
 </script>
