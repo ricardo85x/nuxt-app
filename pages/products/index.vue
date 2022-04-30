@@ -2,16 +2,27 @@
   <div>
     <h1 class="text-lg font-bold">Products</h1>
     <NuxtLink to="/products/product-a"> Product A</NuxtLink>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
-      facilis ea iure esse minima nobis id, ipsa tempore dolor dolorem expedita
-      qui laudantium delectus, at culpa laboriosam quis tenetur necessitatibus?
-    </p>
+
+    <ul style="list-style-type: circle;" v-for="product in products" :key="product.id">
+      <li>{{ product.title }}</li>
+    </ul>
+    
+   
   </div>
 </template>
 
 <script>
 export default {
   name: "products",
+  data() {
+    return {};
+  },
+  async asyncData({$axios}) {
+    
+    const products = await $axios.$get("https://jsonplaceholder.typicode.com/posts?_limit=3")
+    return {
+      products
+    };
+  },
 };
 </script>

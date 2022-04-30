@@ -1,6 +1,6 @@
 export default  ({ redirect }) => {
 
-    const loggedIn = false;
+    const loggedIn = true;
 
     if(!loggedIn) {
         redirect("/")
