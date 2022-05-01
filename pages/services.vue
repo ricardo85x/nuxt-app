@@ -56,7 +56,7 @@ export default {
   // after the component is created
   async fetch() {
     this.services = await this.$axios.$get(
-      "https://jsonplaceholder.typicode.com/users?_limit=3"
+      "users?_limit=3"
     );
 
     this.service_name = faker.animal.dog();

@@ -1,4 +1,6 @@
 export default {
+
+  target: 'server', // static|server default is server
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-app',
@@ -38,7 +40,8 @@ export default {
       mode: 'client' // server or client
     },
     "@/plugins/dayjs",
-    "@/plugins/vtooltip"
+    "@/plugins/vtooltip",
+    "@/plugins/axios"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -54,6 +57,11 @@ export default {
   modules: [
     '@nuxtjs/axios'
   ],
+
+  axios: {
+    baseURL: '/',
+
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
