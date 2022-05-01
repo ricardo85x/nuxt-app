@@ -20,6 +20,17 @@ export default {
   css: [
   ],
 
+
+  // not sensitive variable available to public
+  publicRuntimeConfig: {
+    youtube_api_key: process.env.YOUTUBE_API_KEY
+  },
+
+  // sensitive variable only available on serverside
+  privateRuntimeConfig: {
+    facebook_api_key: process.env.FACEBOOK_API_KEY
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     {

@@ -1,6 +1,10 @@
 <template>
   <div>
 
+    <pre>
+      {{ $config }}
+    </pre> 
+
     <VTooltip>
 
       <a>Sponsor me</a>
@@ -32,6 +36,16 @@ export default {
   mounted() {
     console.log(this.$name("bebete"))
     console.log(this.$dayjs().format())
+
+  },
+
+  // only on client side
+  created() {
+    console.log("created", this.$config)
+  },
+
+  asyncDate( { $config }){
+    console.log("asyncData", this.$config)
   },
 
   computed: {
