@@ -1,0 +1,11 @@
+export default {
+    getUsers() {
+
+    },
+
+    getUser() {
+        
+    }
+
+
+}
